@@ -7,6 +7,7 @@ function run(command, data) {
       break;
   
     default:
+      process.stdout.write('Invalid input\n');
       break;
   }
 }

@@ -1,5 +1,5 @@
-function welcome(userName) {
+function welcomeMessage(userName) {
   process.stdout.write(`Welcome to the File Manager, ${userName}!`)
 }
 
-export default welcome;
+export default welcomeMessage;

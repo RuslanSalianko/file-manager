@@ -1,3 +1,4 @@
+import cpus from "./cpus.mjs";
 import eol from "./eol.mjs";
 
 function os(parameter) {
@@ -5,7 +6,9 @@ function os(parameter) {
     case '--EOL':
       eol();
       break;
-  
+    case '--cpus':
+      cpus();
+    break;
     default:
       break;
   }

@@ -1,5 +1,6 @@
 import invalidMessage from "../message/invalid.mjs";
 import exit from "./exit.mjs";
+import ls from "./navigation/ls.mjs";
 import up from "./navigation/up.mjs";
 import os from "./os/index.mjs";
 
@@ -13,6 +14,9 @@ function run(command, data) {
       break;
     case 'up':
       up();
+      break;
+    case 'ls':
+      ls();
       break;
     default:
       invalidMessage();

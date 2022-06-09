@@ -1,4 +1,5 @@
 import invalidMessage from "../message/invalid.mjs";
+import add from "./basic/add.mjs";
 import cat from "./basic/cat.mjs";
 import exit from "./exit.mjs";
 import cd from "./navigation/cd.mjs";
@@ -24,7 +25,10 @@ async function run(command, data) {
       await cd(command[1]);
       break;
     case 'cat':
-      await cat(command[1], data.rl);
+      await cat(command[1]);
+      break;
+    case 'add':
+      await add(command[1]);
       break;
     default:
       invalidMessage();

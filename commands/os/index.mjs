@@ -1,5 +1,6 @@
 import cpus from "./cpus.mjs";
 import eol from "./eol.mjs";
+import homedir from "./homedir.mjs";
 
 function os(parameter) {
   switch (parameter) {
@@ -9,6 +10,9 @@ function os(parameter) {
     case '--cpus':
       cpus();
     break;
+    case '--homedir':
+      homedir();
+      break;
     default:
       break;
   }

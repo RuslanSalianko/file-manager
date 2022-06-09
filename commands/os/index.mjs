@@ -1,6 +1,7 @@
 import cpus from "./cpus.mjs";
 import eol from "./eol.mjs";
 import homedir from "./homedir.mjs";
+import username from "./username.mjs";
 
 function os(parameter) {
   switch (parameter) {
@@ -12,6 +13,9 @@ function os(parameter) {
     break;
     case '--homedir':
       homedir();
+      break;
+    case '--username':
+      username();
       break;
     default:
       break;

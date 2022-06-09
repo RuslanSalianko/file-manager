@@ -14,7 +14,8 @@ function start() {
   });
 
   rl.on('line', function (line) {
-    run(line, {userName, rl});
+    const command = line.split(' ');
+    run(command, {userName, rl});
   })
   
   rl.on('SIGINT', () => {

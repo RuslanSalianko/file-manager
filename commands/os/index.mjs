@@ -1,3 +1,4 @@
+import architecture from "./architecture.mjs";
 import cpus from "./cpus.mjs";
 import eol from "./eol.mjs";
 import homedir from "./homedir.mjs";
@@ -16,6 +17,9 @@ function os(parameter) {
       break;
     case '--username':
       username();
+      break;
+    case '--architecture':
+      architecture();
       break;
     default:
       break;

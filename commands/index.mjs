@@ -1,3 +1,4 @@
+import invalidMessage from "../message/invalid.mjs";
 import exit from "./exit.mjs";
 import os from "./os/index.mjs";
 
@@ -10,7 +11,7 @@ function run(command, data) {
       os(command[1])
       break;
     default:
-      process.stdout.write('Invalid input\n');
+      invalidMessage();
       break;
   }
 }

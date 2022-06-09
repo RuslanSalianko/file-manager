@@ -1,3 +1,4 @@
+import invalidMessage from "../../message/invalid.mjs";
 import architecture from "./architecture.mjs";
 import cpus from "./cpus.mjs";
 import eol from "./eol.mjs";
@@ -22,6 +23,7 @@ function os(parameter) {
       architecture();
       break;
     default:
+      invalidMessage();
       break;
   }
 }

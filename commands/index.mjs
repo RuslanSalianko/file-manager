@@ -1,10 +1,11 @@
 import invalidMessage from "../message/invalid.mjs";
 import exit from "./exit.mjs";
+import cd from "./navigation/cd.mjs";
 import ls from "./navigation/ls.mjs";
 import up from "./navigation/up.mjs";
 import os from "./os/index.mjs";
 
-function run(command, data) {
+async function run(command, data) {
   switch (command[0]) {
     case '.exit':
       exit(data);
@@ -16,7 +17,10 @@ function run(command, data) {
       up();
       break;
     case 'ls':
-      ls();
+      await ls();
+      break;
+    case 'cd':
+      await cd(command[1]);
       break;
     default:
       invalidMessage();

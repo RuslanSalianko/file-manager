@@ -18,9 +18,9 @@ function start() {
   });
   
 
-  rl.on('line', function (line) {
+  rl.on('line', async function (line) {
     const command = line.split(' ');
-    run(command, { userName, rl });
+    await run(command, { userName, rl });
     process.stdout.write(`You are currently in ${process.env.currentDir}\n`);
     
   })

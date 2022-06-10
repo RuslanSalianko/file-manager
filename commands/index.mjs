@@ -3,6 +3,7 @@ import add from "./basic/add.mjs";
 import cat from "./basic/cat.mjs";
 import cp from "./basic/cp.mjs";
 import mv from "./basic/mv.mjs";
+import rm from "./basic/rm.mjs";
 import rn from "./basic/rn.mjs";
 import exit from "./exit.mjs";
 import cd from "./navigation/cd.mjs";
@@ -41,6 +42,9 @@ async function run(command, data) {
       break;
     case 'cp': 
       await cp(command[1], command[2]);
+      break;
+    case 'rm':
+      rm(command[1]);
       break;
     default:
       invalidMessage();

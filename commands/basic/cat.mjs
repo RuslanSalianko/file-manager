@@ -1,9 +1,9 @@
 import { existsSync, readFileSync, statSync } from 'fs';
+import { pathProcessing } from '../../utils/helpers.mjs';
 
-async function cat(file, rl) {
+async function cat(path) {
   try {
-    const { currentDir } = process.env;
-    const pathFileToRead = `${currentDir}/${file}`;
+    const pathFileToRead = pathProcessing(path);
 
     if (await existsSync(pathFileToRead)) {
       const isFile = await statSync(pathFileToRead).isFile();

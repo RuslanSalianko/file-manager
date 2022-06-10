@@ -1,7 +1,7 @@
 import { renameSync } from 'fs';
 import { pathProcessing } from '../../utils/helpers.mjs';
 
-async function rn(pathFile, name) {
+async function rn(pathFile, newName) {
   try {
     const path = pathProcessing(pathFile);
     const newPath = `${path.split('/').slice(0, -1).join('/')}/${newName}`;

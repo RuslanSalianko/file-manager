@@ -1,6 +1,7 @@
 import invalidMessage from "../message/invalid.mjs";
 import add from "./basic/add.mjs";
 import cat from "./basic/cat.mjs";
+import cp from "./basic/cp.mjs";
 import mv from "./basic/mv.mjs";
 import rn from "./basic/rn.mjs";
 import exit from "./exit.mjs";
@@ -37,6 +38,9 @@ async function run(command, data) {
       break;
     case 'mv':
       await mv(command[1], command[2]);
+      break;
+    case 'cp': 
+      await cp(command[1], command[2]);
       break;
     default:
       invalidMessage();

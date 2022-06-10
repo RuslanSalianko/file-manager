@@ -1,18 +1,13 @@
-import path, { isAbsolute } from 'path';
 import { existsSync } from 'fs';
+import { pathProcessing } from '../../utils/helpers.mjs';
 
 async function cd(newPath) {
   try {
-    const { currentDir } = process.env;
-    let newDir;
-    if (path.isAbsolute(newPath)) {
-      newDir = newPath;
-    } else {
-      newDir = path.join(currentDir, newPath);
-    }
+
+    const path = pathProcessing(newPath);
     
-    if (await existsSync(newDir)){
-      process.env.currentDir = newDir;
+    if (await existsSync(path)){
+      process.env.currentDir = path;
     } else {
       throw new Error('Invalid directory path\n');
     }

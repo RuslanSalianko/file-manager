@@ -5,6 +5,7 @@ import cp from "./basic/cp.mjs";
 import mv from "./basic/mv.mjs";
 import rm from "./basic/rm.mjs";
 import rn from "./basic/rn.mjs";
+import compress from "./compress.mjs";
 import exit from "./exit.mjs";
 import hash from "./hash.mjs";
 import cd from "./navigation/cd.mjs";
@@ -45,10 +46,14 @@ async function run(command, data) {
       await cp(command[1], command[2]);
       break;
     case 'rm':
-      rm(command[1]);
+      await rm(command[1]);
       break;
     case 'hash': 
-      hash(command[1]);
+      await hash(command[1]);
+      break;
+    case 'compress':
+      await compress(command[1], command[2]);
+      break;
     default:
       invalidMessage();
       break;

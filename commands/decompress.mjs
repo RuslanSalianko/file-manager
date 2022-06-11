@@ -1,4 +1,4 @@
-import { createUnzip as createBrotliDecompress } from 'zlib';
+import { createBrotliDecompress } from 'zlib';
 import { createWriteStream, createReadStream } from 'fs';
 import { basename } from 'path';
 import { pipeline } from 'stream';

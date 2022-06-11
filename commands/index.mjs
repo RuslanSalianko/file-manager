@@ -6,6 +6,7 @@ import mv from "./basic/mv.mjs";
 import rm from "./basic/rm.mjs";
 import rn from "./basic/rn.mjs";
 import compress from "./compress.mjs";
+import decompress from "./decompress.mjs";
 import exit from "./exit.mjs";
 import hash from "./hash.mjs";
 import cd from "./navigation/cd.mjs";
@@ -53,6 +54,9 @@ async function run(command, data) {
       break;
     case 'compress':
       await compress(command[1], command[2]);
+      break;
+    case 'decompress':
+      await decompress(command[1], command[2]);
       break;
     default:
       invalidMessage();

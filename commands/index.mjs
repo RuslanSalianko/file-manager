@@ -6,6 +6,7 @@ import mv from "./basic/mv.mjs";
 import rm from "./basic/rm.mjs";
 import rn from "./basic/rn.mjs";
 import exit from "./exit.mjs";
+import hash from "./hash.mjs";
 import cd from "./navigation/cd.mjs";
 import ls from "./navigation/ls.mjs";
 import up from "./navigation/up.mjs";
@@ -46,6 +47,8 @@ async function run(command, data) {
     case 'rm':
       rm(command[1]);
       break;
+    case 'hash': 
+      hash(command[1]);
     default:
       invalidMessage();
       break;

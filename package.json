@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node index.mjs -- --username=your_username",
-    "start": "node index.mjs"
+    "start": "node index.mjs -- --username=Review"
   },
   "repository": {
     "type": "git",
